@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient( 
+    120deg
+, #151822, hsl(140deg 2% 67%), #aaadab);
+    height: 100vh;
+}
+.player .container{
+    width: 245px;
+    margin: 0;
+}
+img{
+    width: 185px;
+    height: 185px;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 15px #151822de, 1px 1px 15px rgb(41 48 72);
+    transition: ease-in-out .3s;
+}
+
+img:hover{
+    box-shadow: 5px 5px 27px #151822de, 5px 5px 27px rgb(41 48 72);
+}
+.player .image {
+    display: flex;
+    margin: auto;
+}
+.player
+{
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    background: rgb(21,24,34);
+    width: 285px;
+    height: 35rem;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+    transition: ease-in-out .3s;
+}
+.player:hover{
+    box-shadow: 10px 11px 27px #160d0eb0, 11px 11px 27px #2d0f14;
+}
+.player h1 {
+    text-align: center;
+    font-size: 16px;
+    padding: 27px;
+    color: #bbb8b8;
+    font-weight: 400;
+    
+}
+.player .left-arrow,
+.player .bars{
+    position: absolute;
+    top: 30px;
+    color: #bbb8b8;
+    background: #24252b94;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.player .bars {
+    float: right;
+    right: 25px;
+}
+.player .left-arrow {
+    left: 25px;
+}
+/**/
+.player .title {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.player .title h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #bbb8b8;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.player .title p {
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 0;
+    color: #bbb8b8;
+    text-transform: uppercase;
+}
+.player .time
+{
+    display: flex;
+    justify-content: space-between;
+}
+.player .time .span1,
+.player .time .span2{
+    color: #d4d5d4;
+    font-size: 15px;
+}
+
+.player .fill {
+    height: 5px;
+    background: #bbb8b8;
+    width: 100%;
+    border-radius: 5px;
+}
+.player .fill-div {
+    height: 5px;
+    background: #2a2a2a;
+    width: 0;
+    position: relative;
+    bottom: 5px;
+    left: 0px;
+    max-width: 100%;
+    border-radius: 5px;
+    border-right: 5px solid #151822;
+}
+.player .audio-btn {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.player .audio-btn .backward {
+    color: #d4d5d4;
+    font-size: 35px;
+    flex: 1;
+    transition: ease-in-out .3s;
+}
+.player .audio-btn .forward {
+    color: #d4d5d4;
+    font-size: 35px;
+    flex: 1;
+    transition: ease-in-out .3s;
+
+}
+.fa-pause {
+   color: #d4d5d4;
+}
+.player .audio-btn .play-btn {
+    color: #d4d5d4;
+    font-size: 35px;
+    flex: 1;
+    transition: ease-in-out .3s;
+}
+
+.player .audio-btn .play-btn:hover,
+.player .audio-btn .forward:hover,
+.player .audio-btn .backward:hover {
+    color: #fff;
+}
+
+/* Media Query */ /*Iphone 6/7/8 */
+@media (width: 414px) {
+
+    .container{
+        width: 200px;
+        margin: 0;
+    }
+    img{
+        width: 170px;
+        height: 170px;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 2px 2px 15px #51545cde, 1px 1px 15px rgb(14 153 140);        transition: ease-in-out .3s;
+    }
+    
+    img:hover{
+        box-shadow: 2px 2px 15px #4ba9c5de, 1px 1px 15px rgb(14 153 140);    }
+    .player .image {
+        display: flex;
+        margin: auto;
+    }
+    .player
+        {
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(
+        0deg
+        , #009688, #e1dede63);
+            width: 260px;
+            height: 32rem;
+            position: relative;
+            border-radius: 25px;
+            box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+            transition: ease-in-out .3s;
+    }
+    .player h1 {
+        text-align: center;
+        font-size: 13px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .player .left-arrow, .player .bars {
+        position: absolute;
+        top: 30px;
+        color: #ffffff;
+        background: #8e98994d;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    .player .bars {
+        float: right;
+        right: 25px;
+    }
+    .player .left {
+        float: left;
+        left: 25px;
+    }
+    .player .title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .player .title h3 {
+        text-align: center;
+        font-size: 13px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .player .title p {
+        text-align: center;
+        font-size: 11px;
+        margin: 10px 0;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .player .time {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .player .time .span1,
+    .player .time .span2{
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .player .fillbar{
+        width: 82%;
+        margin-left: 25px;
+    }
+    .player .fill {
+        height: 5px;
+        background: #ffffff;
+    }
+    .player .fill-div {
+        height: 5px;
+        background: #2a2a2a;
+        width: 0;
+        position: relative;
+        bottom: 5px;
+        left: 0;
+        border-radius: 5px;
+    }
+    /* Ausio Btns */ 
+    .player .audio-btn {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+    .player .audio-btn .backward {
+        color: #ffffff;
+        font-size: 30px;
+        flex: 1;
+        transition: ease-in-out .3s;
+    }
+    .player .audio-btn .forward {
+        color: #ffffff;
+        font-size: 30px;
+        flex: 1;
+        transition: ease-in-out .3s;
+    
+    }
+    .fa-pause {
+        color: #ffffff;
+        outline: none;
+     }
+     .player .audio-btn .play-btn {
+         color: #ffffff;
+         font-size: 30px;
+         flex: 1;
+         transition: ease-in-out .3s;
+     }
+     
+     .player .audio-btn .play-btn:hover,
+     .player .audio-btn .forward:hover,
+     .player .audio-btn .backward:hover {
+         color: #fff;
+     }
+}
+
+
+/* Media Query */ /* Galaxy 5 */
+@media (width: 360px) {
+
+    .container{
+        width: 200px;
+        margin: 0;
+    }
+    img{
+        width: 170px;
+        height: 170px;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 2px 2px 15px #51545cde, 1px 1px 15px rgb(14 153 140);        transition: ease-in-out .3s;
+    }
+    
+    img:hover{
+        box-shadow: 2px 2px 15px #4ba9c5de, 1px 1px 15px rgb(14 153 140);    }
+    .player .image {
+        display: flex;
+        margin: auto;
+    }
+    .player
+        {
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(
+        0deg
+        , #009688, #e1dede63);
+            width: 260px;
+            height: 32rem;
+            position: relative;
+            border-radius: 25px;
+            box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+            transition: ease-in-out .3s;
+    }
+    .player h1 {
+        text-align: center;
+        font-size: 13px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .player .left-arrow, .player .bars {
+        position: absolute;
+        top: 30px;
+        color: #ffffff;
+        background: #8e98994d;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    .player .bars {
+        float: right;
+        right: 25px;
+    }
+    .player .left {
+        float: left;
+        left: 25px;
+    }
+    .player .title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .player .title h3 {
+        text-align: center;
+        font-size: 13px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .player .title p {
+        text-align: center;
+        font-size: 11px;
+        margin: 10px 0;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .player .time {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .player .time .span1,
+    .player .time .span2{
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .player .fillbar{
+        width: 82%;
+        margin-left: 25px;
+    }
+    .player .fill {
+        height: 5px;
+        background: #ffffff;
+    }
+    .player .fill-div {
+        height: 5px;
+        background: #2a2a2a;
+        width: 0;
+        position: relative;
+        bottom: 5px;
+        left: 0;
+        border-radius: 5px;
+    }
+    /* Ausio Btns */ 
+    .player .audio-btn {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+    .player .audio-btn .backward {
+        color: #ffffff;
+        font-size: 30px;
+        flex: 1;
+        transition: ease-in-out .3s;
+    }
+    .player .audio-btn .forward {
+        color: #ffffff;
+        font-size: 30px;
+        flex: 1;
+        transition: ease-in-out .3s;
+    
+    }
+    .fa-pause {
+        color: #ffffff;
+        outline: none;
+     }
+     .player .audio-btn .play-btn {
+         color: #ffffff;
+         font-size: 30px;
+         flex: 1;
+         transition: ease-in-out .3s;
+     }
+     
+     .player .audio-btn .play-btn:hover,
+     .player .audio-btn .forward:hover,
+     .player .audio-btn .backward:hover {
+         color: #fff;
+     }
+}
+
+
+/* Media Query */ /*Iphone X */
+@media (width: 375px) {
+
+    .container{
+        width: 200px;
+        margin: 0;
+    }
+    img{
+        width: 170px;
+        height: 170px;
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow: 2px 2px 15px #51545cde, 1px 1px 15px rgb(14 153 140);        transition: ease-in-out .3s;
+    }
+    
+    img:hover{
+        box-shadow: 2px 2px 15px #4ba9c5de, 1px 1px 15px rgb(14 153 140);    }
+    .player .image {
+        display: flex;
+        margin: auto;
+    }
+    .player
+        {
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(
+        0deg
+        , #009688, #e1dede63);
+            width: 260px;
+            height: 32rem;
+            position: relative;
+            border-radius: 25px;
+            box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+            transition: ease-in-out .3s;
+    }
+    .player h1 {
+        text-align: center;
+        font-size: 13px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
+    .player .left-arrow, .player .bars {
+        position: absolute;
+        top: 30px;
+        color: #ffffff;
+        background: #8e98994d;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    .player .bars {
+        float: right;
+        right: 25px;
+    }
+    .player .left {
+        float: left;
+        left: 25px;
+    }
+    .player .title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .player .title h3 {
+        text-align: center;
+        font-size: 13px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .player .title p {
+        text-align: center;
+        font-size: 11px;
+        margin: 10px 0;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .player .time {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .player .time .span1,
+    .player .time .span2{
+        color: #ffffff;
+        font-size: 12px;
+    }
+    .player .fillbar{
+        width: 82%;
+        margin-left: 25px;
+    }
+    .player .fill {
+        height: 5px;
+        background: #ffffff;
+    }
+    .player .fill-div {
+        height: 5px;
+        background: #2a2a2a;
+        width: 0;
+        position: relative;
+        bottom: 5px;
+        left: 0;
+        border-radius: 5px;
+    }
+    /* Ausio Btns */ 
+    .player .audio-btn {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+    }
+    .player .audio-btn .backward {
+        color: #ffffff;
+        font-size: 30px;
+        flex: 1;
+        transition: ease-in-out .3s;
+    }
+    .player .audio-btn .forward {
+        color: #ffffff;
+        font-size: 30px;
+        flex: 1;
+        transition: ease-in-out .3s;
+    
+    }
+    .fa-pause {
+        color: #ffffff;
+        outline: none;
+     }
+     .player .audio-btn .play-btn {
+         color: #ffffff;
+         font-size: 30px;
+         flex: 1;
+         transition: ease-in-out .3s;
+     }
+     
+     .player .audio-btn .play-btn:hover,
+     .player .audio-btn .forward:hover,
+     .player .audio-btn .backward:hover {
+         color: #fff;
+     }
+}
