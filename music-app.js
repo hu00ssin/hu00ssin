@@ -13,72 +13,78 @@ let currentDuration = document.querySelector('.span1');
 
 let timeTotal = document.querySelector('.span2');
 let fillbar = document.querySelector('.fill-div');
+let progressBar = document.querySelector('.fill');
 
 let currentSongIndex;
 let nextSongIndex;
-let seeking = false;
-let seekto;
+
 // MY Audios
 let audios = [
         {
-            title: 'Anablayak',
-            artist: 'Majid AlMohandis',
-            audioPath: './aghani/majid2.mp3',
+            title: 'عـطشـان',
+            artist: 'مــاجد المهنـدس',
+            audioPath: './aghani/majid.mp3',
             audioImg: './image/m5.jpg'
         },
         {
-            title: 'Madaret',
-            artist: 'Saif Nabil',
+            title: 'مـادريـت',
+            artist: 'سيــف نبـيل',
             audioPath: './aghani/saif2.mp3',
             audioImg: './image/saif2.jpg'
         },
         {
-            title: 'A3of Aldunya',
-            artist: 'Mohamed Alsalim',
+            title: 'أعـوف الـدنيا',
+            artist: 'محمــد السـالم',
             audioPath: './aghani/mohamed2.mp3',
             audioImg: './image/mohamed.jpg'
         },
         {
-            title: 'Maku Sutik',
-            artist: 'Sultan Alomani',
+            title: 'مـاكو صــوتك',
+            artist: 'ســلطان العــماني',
             audioPath: './aghani/sultan.mp3',
             audioImg: './image/s3.jpg'
         },
         {
-            title: 'Mu 7alfin',
-            artist: 'Nour Alzein',
+            title: 'مـوحالفين',
+            artist: 'نـور الزيــن',
             audioPath: './aghani/nour.mp3',
             audioImg: './image/n3.jpg'
         },
         {
-            title: 'Ya Habibi',
-            artist: 'Mahmoud Alturki',
+            title: 'يـا حبيبي',
+            artist: 'محـمود الـتركي',
             audioPath: './aghani/mahmoud.mp3',
             audioImg: './image/mah2.jpg'
         },
         {
-            title: 'Wa3id Mni',
-            artist: 'Rahma Riyadh',
+            title: 'وعــد مـني',
+            artist: 'رحــمة الـرياض',
             audioPath: './aghani/rahma.mp3',
             audioImg: './image/rahma2.jpg'
         },
         {
-            title: 'Atmana',
-            artist: 'Asil Hamim',
+            title: 'أتــمنى',
+            artist: 'أصـيل همــيم',
             audioPath: './aghani/asil.mp3',
             audioImg: './image/asil.jpg'
         },
         {
-            title: 'Bathret',
-            artist: 'Saif Amer',
+            title: 'أنـا البـذرت',
+            artist: 'سيــف عـامر',
             audioPath: './aghani/saifamer.mp3',
             audioImg: './image/saifamer.png'
         },
         {
-            title: 'Aglama Yar',
-            artist: 'Koray Avci',
+            title: 'لا تـبكين',
+            artist: 'كـوراي افـجي',
             audioPath: './aghani/koray.mp3',
-            audioImg: './image/koray.jpg'
+            audioImg: './image/k3.jpg'
+        },
+        {
+            title: 'عـلى بـالي',
+            artist: 'شيرين عبدالوهاب',
+            audioPath: './aghani/sherin.mp3',
+            audioImg: './image/sherin.jpg'
         },
     ];
 // Play Song On Click
@@ -130,7 +136,11 @@ function togglePlayerSong() {
         playIcon.classList.remove('fa-pause')
 
     }
+    if (audioPlayer.end) {
 
+        nextBtn.addEventListener('click', () =>changeSong());
+
+    }
 };
 
 // Function To Change A Songs
@@ -176,7 +186,6 @@ function changeSong(next = true) {
 
         convertTime(Math.round(audioPlayer.currentTime));
         totalTime(Math.floor(audioPlayer.duration));
-        seekTime();
 
     });
 
@@ -208,22 +217,13 @@ function changeSong(next = true) {
         }
     };
 
-    function seekTime(event) {
-        
-        if (audioPlayer.duration == 0) {
-            null
-        }else {
-
-            if (seeking) {
-                let fill = document.querySelector('.fill');
-                fill.value = event.clientX - fill.offsetLeft;
-                seekto = audioPlayer.duration * (fill.value / 100);
-                audioPlayer.currentTime = seekto;
-                console.log('hi')
-            }
-            
-        }
-    };
-    seekTime();
-
-
+    // Set Progress Bar
+    function SetprograssBar(e) {
+        const width = this.clientWidth;
+        const clickX = e.offsetX;
+    
+        const { duration } = audioPlayer;
+        audioPlayer.currentTime = (clickX / width) * duration;
+    }
+    
+    progressBar.addEventListener('click', SetprograssBar)

@@ -19,7 +19,7 @@ img{
     width: 185px;
     height: 185px;
     background-size: cover;
-    border-radius: 50%;
+    border-radius: 3%;
     box-shadow: 2px 2px 15px #151822de, 1px 1px 15px rgb(41 48 72);
     transition: ease-in-out .3s;
 }
@@ -36,22 +36,24 @@ img:hover{
     margin: 40px auto;
     display: flex;
     justify-content: center;
-    background: rgb(21,24,34);
+    background: #24252b;
     width: 285px;
     height: 35rem;
     position: relative;
     border-radius: 25px;
-    box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+    box-shadow: 5px 5px 15px #24252b, 5px 5px 20px #b59999;
     transition: ease-in-out .3s;
 }
-.player:hover{
-    box-shadow: 10px 11px 27px #160d0eb0, 11px 11px 27px #2d0f14;
-}
+/*.player:hover{
+
+    box-shadow: 10px 10px 20px #24252b, 10px 10px 20px #51545c;
+}*/
+
 .player h1 {
     text-align: center;
     font-size: 16px;
     padding: 27px;
-    color: #bbb8b8;
+    color: #ffffff;
     font-weight: 400;
     
 }
@@ -59,7 +61,7 @@ img:hover{
 .player .bars{
     position: absolute;
     top: 30px;
-    color: #bbb8b8;
+    color: #ffffff;
     background: #24252b94;
     width: 30px;
     height: 30px;
@@ -84,16 +86,16 @@ img:hover{
 }
 .player .title h3 {
     text-align: center;
-    font-size: 16px;
-    color: #bbb8b8;
+    font-size: 22px;
+    color: #ffffff;
     text-transform: uppercase;
     font-weight: 500;
 }
 .player .title p {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     margin: 10px 0;
-    color: #bbb8b8;
+    color: #ffffff;
     text-transform: uppercase;
 }
 .player .time
@@ -103,19 +105,20 @@ img:hover{
 }
 .player .time .span1,
 .player .time .span2{
-    color: #d4d5d4;
+    color: #ffffff;
     font-size: 15px;
 }
 
 .player .fill {
     height: 5px;
-    background: #bbb8b8;
+    background: #ffffff;
     width: 100%;
     border-radius: 5px;
+    transition: width .3s linear;
 }
 .player .fill-div {
     height: 5px;
-    background: #2a2a2a;
+    background: #423f3fd9;
     width: 0;
     position: relative;
     bottom: 5px;
@@ -131,23 +134,23 @@ img:hover{
     margin-top: 50px;
 }
 .player .audio-btn .backward {
-    color: #d4d5d4;
+    color: #ffffff;
     font-size: 35px;
     flex: 1;
     transition: ease-in-out .3s;
 }
 .player .audio-btn .forward {
-    color: #d4d5d4;
+    color: #ffffff;
     font-size: 35px;
     flex: 1;
     transition: ease-in-out .3s;
 
 }
 .fa-pause {
-   color: #d4d5d4;
+   color: #ffffff;
 }
 .player .audio-btn .play-btn {
-    color: #d4d5d4;
+    color: #ffffff;
     font-size: 35px;
     flex: 1;
     transition: ease-in-out .3s;
@@ -156,9 +159,11 @@ img:hover{
 .player .audio-btn .play-btn:hover,
 .player .audio-btn .forward:hover,
 .player .audio-btn .backward:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
+
+/* ################################################################################## */
 /* Media Query */ /*Iphone 6/7/8 */
 @media (width: 414px) {
 
@@ -170,12 +175,14 @@ img:hover{
         width: 170px;
         height: 170px;
         background-size: cover;
-        border-radius: 50%;
-        box-shadow: 2px 2px 15px #51545cde, 1px 1px 15px rgb(14 153 140);        transition: ease-in-out .3s;
+        border-radius: 3%;
+        box-shadow: 2px 2px 15px #151822de, 1px 1px 15px rgb(41 48 72);
+        transition: ease-in-out .3s;
     }
     
     img:hover{
-        box-shadow: 2px 2px 15px #4ba9c5de, 1px 1px 15px rgb(14 153 140);    }
+        box-shadow: 2px 2px 15px #151822de, 1px 1px 15px rgb(41 48 72);
+    }
     .player .image {
         display: flex;
         margin: auto;
@@ -185,19 +192,17 @@ img:hover{
             margin: 30px auto;
             display: flex;
             justify-content: center;
-            background: linear-gradient(
-        0deg
-        , #009688, #e1dede63);
+            background: #24252b;
             width: 260px;
             height: 32rem;
             position: relative;
             border-radius: 25px;
-            box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+            box-shadow: 5px 5px 15px #24252b, 5px 5px 20px #b59999;
             transition: ease-in-out .3s;
     }
     .player h1 {
         text-align: center;
-        font-size: 13px;
+        font-size: 14px;
         padding-top: 30px;
         padding-bottom: 20px;
         color: #ffffff;
@@ -208,7 +213,7 @@ img:hover{
         position: absolute;
         top: 30px;
         color: #ffffff;
-        background: #8e98994d;
+        background: #24252b94;
         width: 27px;
         height: 27px;
         line-height: 27px;
@@ -232,14 +237,14 @@ img:hover{
     }
     .player .title h3 {
         text-align: center;
-        font-size: 13px;
+        font-size: 20px;
         color: #ffffff;
         text-transform: uppercase;
         font-weight: 500;
     }
     .player .title p {
         text-align: center;
-        font-size: 11px;
+        font-size: 18px;
         margin: 10px 0;
         color: #ffffff;
         text-transform: uppercase;
@@ -248,7 +253,7 @@ img:hover{
         display: flex;
         justify-content: space-between;
         margin-left: 25px;
-        margin-right: 25px;
+        margin-right: 20px;
     }
     .player .time .span1,
     .player .time .span2{
@@ -265,7 +270,7 @@ img:hover{
     }
     .player .fill-div {
         height: 5px;
-        background: #2a2a2a;
+        background: #423f3fd9;
         width: 0;
         position: relative;
         bottom: 5px;
@@ -310,7 +315,7 @@ img:hover{
      }
 }
 
-
+/* ################################################################################## */
 /* Media Query */ /* Galaxy 5 */
 @media (width: 360px) {
 
@@ -322,12 +327,11 @@ img:hover{
         width: 170px;
         height: 170px;
         background-size: cover;
-        border-radius: 50%;
-        box-shadow: 2px 2px 15px #51545cde, 1px 1px 15px rgb(14 153 140);        transition: ease-in-out .3s;
+        border-radius: 3%;
+        box-shadow: 2px 2px 15px #151822de, 1px 1px 15px rgb(41 48 72);
+        transition: ease-in-out .3s;
     }
     
-    img:hover{
-        box-shadow: 2px 2px 15px #4ba9c5de, 1px 1px 15px rgb(14 153 140);    }
     .player .image {
         display: flex;
         margin: auto;
@@ -337,19 +341,17 @@ img:hover{
             margin: 30px auto;
             display: flex;
             justify-content: center;
-            background: linear-gradient(
-        0deg
-        , #009688, #e1dede63);
+            background: #24252b;
             width: 260px;
             height: 32rem;
             position: relative;
             border-radius: 25px;
-            box-shadow: 20px 20px 40px #24252b, 5px 5px 20px #b59999;
+            box-shadow: 5px 5px 20px #24252b, 5px 5px 20px #24252b;
             transition: ease-in-out .3s;
     }
     .player h1 {
         text-align: center;
-        font-size: 13px;
+        font-size: 14px;
         padding-top: 30px;
         padding-bottom: 20px;
         color: #ffffff;
@@ -360,7 +362,7 @@ img:hover{
         position: absolute;
         top: 30px;
         color: #ffffff;
-        background: #8e98994d;
+        background: transparent;
         width: 27px;
         height: 27px;
         line-height: 27px;
@@ -384,14 +386,14 @@ img:hover{
     }
     .player .title h3 {
         text-align: center;
-        font-size: 13px;
+        font-size: 20px;
         color: #ffffff;
         text-transform: uppercase;
         font-weight: 500;
     }
     .player .title p {
         text-align: center;
-        font-size: 11px;
+        font-size: 18px;
         margin: 10px 0;
         color: #ffffff;
         text-transform: uppercase;
@@ -400,7 +402,7 @@ img:hover{
         display: flex;
         justify-content: space-between;
         margin-left: 25px;
-        margin-right: 25px;
+        margin-right: 20px;
     }
     .player .time .span1,
     .player .time .span2{
@@ -417,7 +419,7 @@ img:hover{
     }
     .player .fill-div {
         height: 5px;
-        background: #2a2a2a;
+        background: #423f3fd9;
         width: 0;
         position: relative;
         bottom: 5px;
@@ -462,8 +464,8 @@ img:hover{
      }
 }
 
-
-/* Media Query */ /*Iphone X */
+/* ################################################################################## */
+/* Media Query */ /*Iphone X  width:375px */
 @media (width: 375px) {
 
     .container{
@@ -474,12 +476,11 @@ img:hover{
         width: 170px;
         height: 170px;
         background-size: cover;
-        border-radius: 50%;
-        box-shadow: 2px 2px 15px #51545cde, 1px 1px 15px rgb(14 153 140);        transition: ease-in-out .3s;
+        border-radius: 3%;
+        box-shadow: 2px 2px 15px #151822de, 1px 1px 15px rgb(41 48 72);
+        transition: ease-in-out .3s;
     }
     
-    img:hover{
-        box-shadow: 2px 2px 15px #4ba9c5de, 1px 1px 15px rgb(14 153 140);    }
     .player .image {
         display: flex;
         margin: auto;
@@ -489,9 +490,7 @@ img:hover{
             margin: 30px auto;
             display: flex;
             justify-content: center;
-            background: linear-gradient(
-        0deg
-        , #009688, #e1dede63);
+            background: #24252b;
             width: 260px;
             height: 32rem;
             position: relative;
@@ -501,7 +500,7 @@ img:hover{
     }
     .player h1 {
         text-align: center;
-        font-size: 13px;
+        font-size: 14px;
         padding-top: 30px;
         padding-bottom: 20px;
         color: #ffffff;
@@ -512,7 +511,7 @@ img:hover{
         position: absolute;
         top: 30px;
         color: #ffffff;
-        background: #8e98994d;
+        background: transparent;
         width: 27px;
         height: 27px;
         line-height: 27px;
@@ -536,14 +535,14 @@ img:hover{
     }
     .player .title h3 {
         text-align: center;
-        font-size: 13px;
+        font-size: 20px;
         color: #ffffff;
         text-transform: uppercase;
         font-weight: 500;
     }
     .player .title p {
         text-align: center;
-        font-size: 11px;
+        font-size: 18px;
         margin: 10px 0;
         color: #ffffff;
         text-transform: uppercase;
@@ -552,7 +551,7 @@ img:hover{
         display: flex;
         justify-content: space-between;
         margin-left: 25px;
-        margin-right: 25px;
+        margin-right: 20px;
     }
     .player .time .span1,
     .player .time .span2{
@@ -569,7 +568,7 @@ img:hover{
     }
     .player .fill-div {
         height: 5px;
-        background: #2a2a2a;
+        background: #423f3fd9;
         width: 0;
         position: relative;
         bottom: 5px;
