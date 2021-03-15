@@ -13,7 +13,7 @@ let currentDuration = document.querySelector('.span1');
 
 let timeTotal = document.querySelector('.span2');
 let fillbar = document.querySelector('.fill-div');
-let progressBar = document.querySelector('.fill');
+let progressBar = document.querySelector('.fillbar');
 
 let currentSongIndex;
 let nextSongIndex;
